@@ -1,0 +1,12 @@
+﻿/*.spaStudentCourseParagraph{
+    text-indent: 2em;
+}*/
+
+.spaStudentTestPageNestedList {
+    li::before {
+        content: none;
+        counter-increment: none;
+        color: none;
+        position: relative;
+    }
+}

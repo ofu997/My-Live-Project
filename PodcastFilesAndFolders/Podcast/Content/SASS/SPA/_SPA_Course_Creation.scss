@@ -1,0 +1,58 @@
+﻿.courseCreateButtonSubmit {
+    margin-top: 1.2em;
+}
+
+#CourseName {
+    margin: 0;
+}
+
+.separateTwoSpans {
+    padding-left: .5em;
+    padding-right: .5em;
+
+    span:nth-child(2) {
+        float: right;
+    }
+}
+
+.spaMainDisplayContainer {
+    .courseDesignerTextArea {
+        resize: none;
+        height: 10em;
+        word-break: break-all;
+        word-break: break-word;
+        overflow-y: auto;
+        overflow-x: hidden;
+        word-wrap: break-word;
+    }
+}
+
+.spaCreatePageField {
+    .spaFieldTextArea {
+        resize: none;
+        height: 10em;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .spaCourseCreationBtn {
+        margin-top: 1em;
+    }
+
+    .spaFieldCreateList:hover {
+        color: grey;
+    }
+
+    .spaFieldCreateList {
+        color: #ff9c00;
+        cursor: pointer;
+    }
+
+    .spaCreateListItem {
+        margin-top: 1em;
+    }
+
+    .spaCreateListItem:first-of-type {
+        margin-top: 0;
+    }
+}

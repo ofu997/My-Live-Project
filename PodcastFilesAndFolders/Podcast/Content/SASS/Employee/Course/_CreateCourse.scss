@@ -1,0 +1,19 @@
+﻿// CSS for viewing course creation items
+
+// Hide course position unless they specify the course is core
+.CoursePosition {
+    display: none;
+}
+
+// Text area styling for course creation
+.CreatePageFieldForm textarea {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+}
+
+// Default by hiding all create field sections and fade them in when selected
+.initHide {
+    display: none;
+}

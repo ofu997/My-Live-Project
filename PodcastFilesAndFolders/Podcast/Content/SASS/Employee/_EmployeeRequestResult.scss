@@ -1,0 +1,58 @@
+﻿// Each result of a method on the employee panel should be styled in this document
+
+// Give to everything to hide it on the page
+.hideUserTableDisplay {
+    display: none;
+}
+
+// Position the results
+.appendContents {
+    overflow-y: auto;
+
+    th{
+        font-weight:400;
+        text-transform: none;
+    }
+}
+
+// select parent and push it below the navbar
+div > .appendContents{
+    overflow:hidden;
+}
+
+// Centered edit box
+.editUser {
+    height: auto;
+    position: fixed;
+    left:0;
+    right:0;
+    top: 0;
+    bottom:0;
+    background-color: rgba(135, 135, 135, 0.68);
+    z-index: 3;
+}
+
+.editUserBoxStyling{
+    height: auto;
+    position: fixed;
+    background-color: white;
+    padding-bottom: 1em;
+    top: 50%;
+    margin-top:-151px;
+
+    input{
+        width:100%;
+    }
+
+    input[type="submit"] {
+        margin-top: 1em;
+    }
+}
+
+.allUserRoles{
+    display: none;
+}
+
+#ProductList {
+    overflow:auto;
+}

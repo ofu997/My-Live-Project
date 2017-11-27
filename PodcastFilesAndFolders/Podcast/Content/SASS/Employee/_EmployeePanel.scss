@@ -1,0 +1,110 @@
+﻿
+/*
+    Makes the li elements styled
+*/
+.pointer {
+    cursor: pointer;
+}
+
+// Product search button spacing
+.productSearchButton {
+    margin-top: 1em;
+}
+
+// Website drop down styling
+#website {
+    max-height: none;
+    max-width: none;
+    width: auto;
+    height: 1.865em;
+}
+
+.sub-menu > li > .fakeAnchor:hover {
+    text-decoration: none;
+    margin-left: 5px;
+    color: #ff9c00;
+}
+
+.sub-menu > li > .fakeAnchor {
+    padding: 12px;
+    background-color: rgba(26, 43, 81,0.85);
+    border-left: 2px solid #ff9c00;
+    font-size: 11px;
+    color: #fff;
+    display: block;
+    transition: 200ms ease all;
+}
+
+.fakeAnchor:hover, .fakeAnchor:focus, .fakeAnchor:active:hover {
+    text-decoration: none;
+    outline: none;
+    color: #c77a00;
+}
+
+.fakeAnchor:focus, .fakeAnchor:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.fakeAnchor:active, .fakeAnchor:hover {
+    outline: 0;
+}
+
+.fakeAnchor {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff9c00;
+    -webkit-transition: 350ms ease all;
+    transition: 350ms ease all;
+}
+
+.fakeAnchor {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.fakeAnchor {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > .fakeAnchor {
+    color: #777;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > .fakeAnchor {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.navbar-nav > li > .fakeAnchor {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.nav > li > .fakeAnchor {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-default .navbar-nav > li > .fakeAnchor {
+        padding: 35px 18px;
+    }
+}
+
+.navbar-default .navbar-nav > li > .fakeAnchor, .navbar-default .navbar-nav > li > .fakeAnchor:active, .navbar-default .navbar-nav > li > .fakeAnchor:focus {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 300;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+    -webkit-transition: 350ms all ease;
+    transition: 350ms all ease;
+}

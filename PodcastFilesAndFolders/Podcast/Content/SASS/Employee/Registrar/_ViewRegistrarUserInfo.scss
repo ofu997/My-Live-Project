@@ -1,0 +1,51 @@
+﻿// Styling for anonymoususer information.  Specifically for the modal
+
+#anonymousUserModal {
+
+    #anonymousUserModalNotes{
+        resize: none;
+        height: 5em;
+        overflow: auto;
+        word-break:break-all;
+        word-break:break-word;
+        width: 100%;
+    }
+
+    #anonymousUserModalMessages {
+        height: 5em;
+        overflow-y: auto;
+        word-break: break-all;
+        word-break: break-word;
+
+        p {
+            font-size: .8em;
+        }
+        // Styling for modal messages
+        .chatMessage p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .chatMessage > .otherUserMessage {
+            margin-right: 45px;
+            margin-left: 3px;
+            background-color: lightblue;
+            border-radius: 15px 15px 15px 0px;
+            float: left;
+        }
+
+        .chatMessage > .myUserMessage {
+            margin-right: 3px;
+            margin-left: 45px;
+            background-color: lightgray;
+            border-radius: 15px 15px 0% 15px;
+            float: right;
+        }
+
+        br {
+            clear:both;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+﻿// Css for school portal layout
+
+.toolBar {
+    position: absolute;
+    bottom: 0;
+}
+
+.messages {
+    height: 4em;
+    width: 100%;
+}
+
+// Force the navbar to be position relative
+@media only screen and (min-width: 768px) {
+    .navbarForceRelative {
+         position: relative; 
+    }
+}

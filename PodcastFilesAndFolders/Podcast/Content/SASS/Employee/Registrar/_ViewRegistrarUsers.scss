@@ -1,0 +1,64 @@
+﻿// Styling for viewing Anonymous Users on the employee panel
+.appendContents .AnonymousUserTable {
+    width: 100%;
+}
+
+/* Styling for the Notes Box */
+.anonymousUserNotesView {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgba(196, 196, 196, 0.81);
+
+    .container {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: calc(50% - 10em);
+        top: -webkit-calc(50% - 10em);
+        top: -o-calc(50% - 10em);
+        top: -moz-calc(50% - 10em);
+
+        textarea {
+            height: 15em;
+            margin: 0;
+            resize: none;
+            width: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            word-break: break-all;
+            word-break: break-word;
+        }
+
+        .row {
+            background-color: white;
+        }
+    }
+}
+
+#IQTestResults {
+    overflow: auto;
+    max-height: 15em;
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+
+    div{
+        clear:both;
+    }
+
+    .IQTestAnswer {
+        min-height: 1.5em;
+
+        span:first-child {
+            float: left;
+        }
+
+        span:nth-child(2) {
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+﻿.iq-test-header h1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.hr-double {
+    border-top: 3px double #8c8b8b;
+    width: 80%;
+}
+
+#iq-test-container {
+    margin: 0 auto;
+    width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+
+    .form-group {
+
+        p {
+            font-size: 1.4em;
+        }
+
+        .form-check-label {
+            font-size: 1.2em;
+            text-transform: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .form-check {
+            padding-left: 25px;
+        }
+    }
+}
+
+

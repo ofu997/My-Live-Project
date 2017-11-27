@@ -1,0 +1,360 @@
+﻿@keyframes spaLoaderFadeOut {
+    from {
+        opacity: 1;
+        z-index: 50;
+    }
+
+    to {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+.spaMainDisplayContainer {
+    position: absolute;
+    left: 155px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: calc(100% - 155px);
+    top: 64px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+
+    #spaMessagingInbox {
+        position: fixed;
+        width: inherit;
+        height: calc(100vh - 64px);
+        z-index: 10;
+        background-color: #fefefe;
+        margin-left:0;
+
+        .spaInboxStudentInfoTab{
+            h6 {
+                display: inline-block;
+            }
+            p{
+                display: inline-block;
+                margin-left: .5em;
+            }
+        }
+        //left:-100%;
+        .spaInboxStudentUserList {
+            width: 100%;
+            max-height: calc(100vh - 64px);
+            overflow: auto;
+
+            .spaStudentChatListItem {
+                width: 100%;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                padding-left: 1.5em;
+                padding-right: .5em;
+                cursor: pointer;
+                display: flex;
+
+
+                div:first-child {
+                    width: 20%;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        vertical-align: middle;
+                    }
+                }
+
+                div {
+                    width: 80%;
+                    display: inline-block;
+
+                    h6 {
+                        padding: .4em;
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .spaStudentChatListItem:hover {
+            background-color: #f5f5f5;
+        }
+
+        .spaInboxSendMessage {
+            textarea {
+                resize: none;
+                width: 100%;
+                height: 5em;
+                bottom: 0;
+            }
+        }
+
+        .spaMessageList {
+            height: calc(100vh - 165px);
+            overflow: auto;
+            border: 1px solid lightgrey;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+
+        .spaMessagingOtherUser {
+            pre {
+            }
+        }
+
+        .spaMessagingCurrentUser {
+            text-align: right;
+
+            pre {
+                background-color: lightblue;
+            }
+        }
+
+        .spaMessageListItem {
+            margin-left: .3em;
+            margin-right: .3em;
+
+            pre {
+                display: inline-block;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;
+                white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                border-radius: unset;
+                border: none;
+                width: auto;
+                max-width: 75%;
+                padding-top: .35em;
+                padding-bottom: .35em;
+                padding-right: .35em;
+                padding-left: .35em;
+                text-align: left;
+            }
+        }
+    }
+
+    .loader {
+        position: fixed;
+        color: #1a2b51;
+        font-size: 24px;
+        margin-top: -.5em;
+        margin-left: -.5em;
+        left: 50%;
+        top: 50%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        text-indent: -9999em;
+        -webkit-animation: load4 1.3s infinite linear;
+        animation: load4 1.3s infinite linear;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    @keyframes spaLoaderFadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes load4 {
+        0%, 100% {
+            box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+        }
+
+        12.5% {
+            box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+
+        25% {
+            box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+
+        37.5% {
+            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+        }
+
+        50% {
+            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+        }
+
+        62.5% {
+            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+        }
+
+        75% {
+            box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+        }
+
+        87.5% {
+            box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+        }
+    }
+
+    @keyframes load4 {
+        0%, 100% {
+            box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+        }
+
+        12.5% {
+            box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+
+        25% {
+            box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+        }
+
+        37.5% {
+            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+        }
+
+        50% {
+            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+        }
+
+        62.5% {
+            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+        }
+
+        75% {
+            box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+        }
+
+        87.5% {
+            box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+        }
+    }
+
+    .spaCourseBox {
+        margin-top: 25px;
+        border: none;
+
+        h4 {
+            color: #1a2b51;
+        }
+    }
+}
+
+.topBar {
+    position: fixed;
+    z-index: 11;
+    height: 64px;
+    background-color: #d3d3d3;
+    width: calc(100% - 155px);
+    left: 155px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    -moz-transition: .5s;
+
+    .fa-bars {
+        font-size: 2.2em;
+        margin-right: auto;
+        padding-top: .1em;
+        padding-left: .1em;
+        padding-right: .1em;
+        padding-bottom: .1em;
+        margin-top: .35em;
+        margin-left: .4em;
+        cursor: pointer;
+    }
+
+    .fa-bars:hover {
+        color: white;
+    }
+
+    .spaLogOff {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        font-size: 1.4em;
+        width: 7em;
+        text-align: center;
+        background-color: grey;
+
+        span {
+            vertical-align: -.8em;
+        }
+    }
+}
+
+
+
+/* -------------------------------------
+Course cards
+--------------------------------------*/
+
+#third-section {
+    margin-top: 90px;
+}
+
+.projects-ttle h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 300%;
+    color: black;
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.SPAcourseDetails {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.SPAcourseText {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+.note h6 {
+    padding-top: 4%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 150%;
+    color: black;
+    text-align: center;
+}
+
+.page {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/*------Card Overlays ----*/
+
+a {
+    -webkit-transition: .25s all;
+    transition: .25s all;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.16), 0 12px 20px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition: .25s box-shadow;
+    transition: .25s box-shadow;
+}
+
+.card:focus, .card:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.38), 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+}
+
+.card-inverse .card-img-overlay {
+    background-color: rgba(51, 51, 51, 0.85);
+    border-color: rgba(51, 51, 51, 0.85);
+}

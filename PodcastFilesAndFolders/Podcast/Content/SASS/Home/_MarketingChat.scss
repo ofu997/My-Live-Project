@@ -1,0 +1,71 @@
+﻿// Styling for an anonymous chat user
+
+// Only do this with small screens and up
+@media (min-width: 768px){
+
+    // Move the container below the navbar
+    .homeMessagingContainer{
+        margin-top: 124px;
+    }
+}
+
+.homeMessagingContainer {
+    height: calc(100% - 12em);
+    height: -webkit-calc(100% - 12em);
+    height: -o-calc(100% - 12em);
+    height: -moz-calc(100% - 12em);
+    overflow: hidden;
+    position: relative;
+}
+
+.AnonymousIMPositioner {
+    position:absolute;
+    bottom: 0;
+    height: 100%;
+
+    .chatMessage p{
+        margin-top:5px;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        word-break: break-all;
+        word-break: break-word;
+    }
+
+    .chatMessage > .otherUserMessage {
+        margin-right: 45px;
+        margin-left: 3px;
+        background-color: lightblue;
+        border-radius: 15px 15px 15px 0px;
+        float:left;
+    }
+
+    .chatMessage > .myUserMessage {
+        margin-right: 3px;
+        margin-left: 45px;
+        background-color: lightgray;
+        border-radius: 15px 15px 0% 15px;
+        float:right;
+    }
+}
+
+.homeInstantMessages{
+    overflow: auto;
+    max-height: calc(100% - 5em);
+    max-height: -webkit-calc(100% - 5em);
+    max-height: -o-calc(100% - 5em);
+    max-height: -moz-calc(100% - 5em);
+}
+
+.homeMessagingContainer textarea{
+    min-height: 5em;
+    overflow: auto;
+    position: absolute;
+    bottom: 0;
+    resize: none;
+    width: calc(100% - 2em);
+    width: -o-calc(100% - 2em);
+    width: -webkit-calc(100% - 2em);
+    width: -moz-calc(100% - 2em);
+}

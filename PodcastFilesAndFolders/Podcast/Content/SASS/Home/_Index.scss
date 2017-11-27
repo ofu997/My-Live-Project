@@ -1,0 +1,242 @@
+﻿// Styling for the Home/Index view
+
+/* Founders */
+.teacher-card:hover:before {
+    top: 90%;
+    opacity: 1;
+    background-color: unset;
+}
+
+.teacher-card:hover .social-links {
+    top: 70%;
+}
+
+.megaPhoneAnnouncements {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+
+    .announcement-text {
+        z-index: 2;
+        padding-bottom: .5em;
+        padding-top: 1em;
+    }
+}
+
+.liveChatHelpButton {
+    position: fixed;
+    float: right;
+    right: 20px;
+    bottom: 120px;
+    z-index: 20;
+}
+
+#homeFadeInVideoContainer {
+
+    z-index:100;
+    background-color: rgba(0, 0, 0, 0.91);
+    display:none;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    position:fixed;
+
+    #homeFadeInVideo {
+        position: fixed;
+        width: 70%;
+        margin-left: -35%;
+        left: 50%;
+        top: 5%;
+    }
+}
+
+.techAcademyCustomPlayButton {
+    border: 5px solid #ff9c00;
+    color: #ff9c00;
+    border-radius: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right:1em;
+    cursor: pointer;
+    margin-top:1em;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  width: 64px;
+  height: 68px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: -1px 1px 5px -1px rgba(55,55,55,0.5);
+  box-shadow: rgb(240, 240, 240) 1px 1px,
+    rgb(240, 240, 240) 2px 2px,
+    rgb(240, 240, 240) 3px 3px,
+    rgb(240, 240, 240) 4px 4px,
+    rgb(240, 240, 240) 5px 5px,
+    rgb(240, 240, 240) 6px 6px,
+    rgb(240, 240, 240) 7px 7px,
+    rgb(240, 240, 240) 8px 8px,
+    rgb(241, 241, 241) 9px 9px,
+    rgb(242, 242, 242) 10px 10px,
+    rgb(243, 243, 243) 11px 11px,
+    rgb(245, 245, 245) 12px 12px,
+    rgb(246, 246, 246) 13px 13px,
+    rgb(247, 247, 247) 14px 14px,
+    rgb(248, 248, 248) 15px 15px,
+    rgb(250, 250, 250) 16px 16px,
+    rgb(251, 251, 251) 17px 17px,
+    rgb(252, 252, 252) 18px 18px,
+    rgb(253, 253, 253) 19px 19px,
+    rgb(255, 255, 255) 20px 20px;
+  
+  &.blue {
+    background-color: $blue;
+    border-top-left-radius: 0;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -14px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 14px 24px 0;
+      border-color: transparent $blue transparent transparent;
+    }
+    
+    &:hover {
+      .bar {
+        width: 36px;
+        
+        &:before {
+          width: 36px;
+        }
+        
+        &:after {
+          width: 40px;
+        }
+      }
+    }
+  }
+  
+  &.grey {
+    background-color: $light-grey;
+    margin-top: 40px;
+    border-top-right-radius: 0;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -14px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 24px 14px 0 0;
+      border-color: $light-grey transparent transparent transparent;
+    }
+    
+    &:hover {
+      .dot {
+        animation: wave 0.8s .4s ease-out infinite;
+      }
+      
+      .dot-left {
+        animation: wave 0.8s .2s ease-out infinite;
+      }
+      
+      .dot-right {
+        animation: wave 0.8s .6s ease-out infinite;
+      }
+    }
+  }
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 40px;
+  margin-left: -20px;
+  margin-top: -3px;
+  height: 6px;
+  background-color: $white;
+  transition: $slide;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 40px;
+    top: -12px;
+    background-color: $white;
+    transition: $slide;
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 30px;
+    bottom: -12px;
+    background-color: $white;
+    transition: $slide;
+  }
+}
+
+.dot {
+  display: block;
+  background-color: $grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius: 100%;
+  transition: $slide;
+  
+  &.dot-left {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: -22px;
+    background-color: $grey;
+    border-radius: 100%;
+    transition: $slide;
+  }
+  
+  &.dot-right {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: 12px;
+    background-color: $grey;
+    border-radius: 100%;
+    transition: $slide;
+  }
+}
+
+//animation
+@keyframes wave {
+  0%    { transform: translateY(0); }
+  50%    { transform: translateY(5px); }
+  100%  { transform: translateY(0); }
+}

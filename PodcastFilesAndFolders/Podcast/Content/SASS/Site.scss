@@ -1,0 +1,40 @@
+﻿
+// Custom styling for our layout
+@import "Shared/_Layout.scss";
+
+// PageList Plugin
+@import "_PagedList.scss";
+
+// Custom styling for out school portal layout
+@import "Shared/_SchoolPortal.scss";
+
+// Styling for the chat toolbar
+@import "Shared/_ChatToolBar.scss";
+
+// Custom styling for the home index
+@import "Home/_Index";
+
+// Styling for the employee actions panel
+@import "Employee/_EmployeePanel.scss";
+
+// Styling for the results of employee action requests
+@import "Employee/_EmployeeRequestResult.scss";
+
+// Styling for the course creation process
+@import "Employee/Course/_CreateCourse.scss";
+
+// Styling for the anonymous user chat
+@import "Home/_MarketingChat.scss";
+
+// Styling for anonymous user view
+@import "Employee/Registrar/_ViewRegistrarUsers.scss";
+@import "Employee/Registrar/_ViewRegistrarUserInfo.scss";
+
+// Styling for IQ test
+@import "Registration/IQTest.scss";
+
+// SPA
+@import "SPA/_SPA_Main_Display_Container.scss";
+@import "SPA/_SPA_Navigation_Bar.scss";
+@import "SPA/_SPA_Course_Creation.scss";
+@import "SPA/_SPA_Student_Course_View.scss";
