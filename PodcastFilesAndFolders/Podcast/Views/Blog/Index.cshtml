@@ -1,0 +1,889 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+}
+
+<div class="page-header">
+    <div class="container">
+        <h1>Tech Blog</h1>
+        <ul class="breadcrumb">
+            <li><a href='@Url.Action("Index", "Home")'>Home</a></li>
+            <li class="active">The Tech Academy Blog</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container mb-20">
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- Sidebar -->
+            <aside class="widget twitter-widget">
+                <h5 class="heading">Twitter Feed</h5>
+                <ul class="tweet-list">
+                    <li>Join us on Friday for a Tech Talk with <a href="">#Dr. Brent Wilson</a> of George Fox University!</li>
+                </ul>
+            </aside>
+            <aside class="widget search-widget">
+                <h5 class="heading">Subscribe to Blog</h5>
+                <form class="search form-inline">
+                    <!-- Search Form -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
+                        </span>
+                    </div>
+                </form>
+            </aside>
+            <aside class="widget category-widget">
+                <h5 class="heading">Categories</h5>
+                <ul class="categories">
+                    <li><a href='@Url.Action("computerBasics", "CourseOverViews")'>Computer Basics</a></li>
+                    <li><a href='@Url.Action("htmlCss", "CourseOverViews")'>What is HTML and CSS3</a></li>
+                    <li><a href='@Url.Action("versionControl", "CourseOverViews")'>Sourse Control</a></li>
+                    <li><a href='@Url.Action("cSharpAspNet", "CourseOverViews")'>.Net Framework</a></li>
+                    <li><a href='@Url.Action("jobPlacement", "CourseOverViews")'>Career</a></li>
+                    <li><a href='@Url.Action("overViewSoftwareDeveloper", "CourseOverViews")'>Techonology</a></li>
+                    <li><a href='@Url.Action("visualStudio", "CourseOverViews")'>Visual Studio</a></li>
+                </ul>
+            </aside>
+            <aside class="widget image-widget">
+                <h5 class="heading">Flickr Feed</h5>
+                <ul class="thumbs">
+                    <li><a href=""><img src="images/flickr-1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-3.jpg" alt=""></a></li>
+                </ul>
+            </aside>
+            <aside class="widget download-widget text-center">
+                <div class="download-info">
+                    <p class="inverse font24">Join us in the course room at The Academy.</p><br />
+                    <a href='@Url.Action("Contact", "Home")' class="btn btn-default">Apply Now</a>
+                </div>
+            </aside>
+            <aside class="widget tagcloud-widget">
+                <h5 class="heading">Trending Tags</h5>
+                <ul class="tagcloud">
+                    <li><a href="#">Math</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Course</a></li>
+                    <li><a href="#">Study</a></li>
+                    <li><a href="#">Bachelors</a></li>
+                    <li><a href="#">Best</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Life</a></li>
+                    <li><a href="#">Fun</a></li>
+                    <li><a href="#">Maths</a></li>
+                    <li><a href="#">Study</a></li>
+                </ul>
+            </aside>
+            <aside class="widget archive-widget">
+                <h5 class="heading">Archives</h5>
+                <ul class="archives">
+                    <li><a href="blog-list-left-sidebar.html">October 2015</a> <span class="badge">08</span></li>
+                    <li><a href="blog-list-left-sidebar.html">November 2015</a> <span class="badge">12</span></li>
+                    <li><a href="blog-list-left-sidebar.html">December 2015</a> <span class="badge">26</span></li>
+                    <li><a href="blog-list-left-sidebar.html">January 2016</a> <span class="badge">17</span></li>
+                    <li><a href="blog-list-left-sidebar.html">February 2016</a> <span class="badge">28</span></li>
+                </ul>
+            </aside>
+            <aside class="widget blog-widget">
+                <h5 class="heading">Recent Blog</h5>
+                <ul class="blog-thumbnail">
+                    <li class="entry">
+                        <div class="entry-content">
+                            <h4 class="entry-header"><a href="">Imposter Syndrome with Dan Linn</a></h4>
+                            <p class="entry-text">The “imposties”, as Linn calls them, is something that happens to everyone. In and outside of the Tech world.</p>
+                        </div>
+                    </li>
+                    <li class="entry">
+                        <div class="entry-content">
+                            <h4 class="entry-header"><a href="">Learning C# at The Tech Academy</a></h4>
+                            <p class="entry-text">In doing my final exercise, I made the front-end for a database come to life!</p>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="widget text-widget">
+                <h5 class="heading">Tech Academy</h5>
+                <p class="color2 font16">The Tech Academy is located in the heart of down town Portland Oregon.</p>
+                <p>Graduates are well-rounded, full-stack, junior developers that can code on the front-end and back-end.<a href='@Url.Action("Contact", "Home")'> Not only can they create dynamic websites,</a> but are trained in application development as well.</p>
+            </aside>
+        </div>
+        <!--END SIDEBAR-->
+
+
+        <!--Blog 5 per page only!-->
+        <!-- 1 blog START BLOG PAGE 1 (displayed by default, rest are hidden) -->
+        <div class="blog-page-1 blog-page col-sm-8">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Jordan V.</a> | <a href=""> 0 Comments</a> | <a href=""> 27 March</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Version Control with Instructor Jordan V.</h3></a>
+                    <p>
+                        At The Tech Academy, one of the courses students take is Version Control. Version control is "the management of changes to documents, computer programs, large websites, and other collections of information." This course covers Version Control Systems (VCS) such as Git that tracks versions of source code as well as GitHub, a repository that allows you to check in and out of versions of files or folders.
+                        In the course one of the questions we ask is: "How can you use these tools as a software developer?" To put it simply, our student John V. told us, you can use Git and GitHub "to work on versions of files, check in/out, branch, and merge. This way you can track your programming progress and view your works on a repository. You can stop and work on it later, resolve conflicts and back up your program.
+                        A question students often need clarification on is "What's the difference between Terminal, Console and Bash? And SSH, is it the same?"
+                        Here's how one of our awesome Instructors Jordan V. explained it:
+                        "The thing about Git is there are numerous, to say the least, ways of utilizing it, from command line tools to guis of varying usefulness. Console (unless I missed it as a primary system) is the overarching term for command line tools, and how they self reference. It is another term for the command line.
+                        I'm assuming you mean Terminal in relation to Git and Macs. Which is the iOS way of manipulating Git through purely text based commands. As far as Bash and Shell (unmentioned), Bash is the Linux-based command line (usable in windows) and Shell is native to windows.
+                        SSH is a secure network protocol, (something that facilitates multiple computers to connect) it differs from the others in that it isn't so much of a VCS as a way to access a machine remotely.  I've seen it used most frequently in cloud computing and people accessing their home computers from abroad. Frequently the use of whichever type is due to computer type and personal preference of the programmer. The syntax of them is usually quite similar, so it shouldn't matter too much which you use."
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!--2nd blog-->
+        <div class="blog-page-1 blog-page col-sm-8">
+            <div class="blog-card">
+                <div class="posted-on">
+                    <span class="date">26</span>
+                    <span class="month">May</span>
+                </div>
+                <div class="blog-media">
+                    <div class="youtube" data-video-id="bLEaxu9jtfg">
+                        <!-- Replace video id with your video id -->
+                        <i class="fa fa-play btn-play"></i>
+                    </div>
+                </div>
+                <div class="blog-meta">
+                    By <a href="">MR. Jack </a> Stanley <a href="">Co-Founder</a> | <a href=""> 0 Comments</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Tech Talk: Nate Taggart &amp; Erik Gross</h3></a>
+                    <p>
+                        Check out this week's awesome Tech Academy Tech Talk with Nate Taggart & Erik Gross!
+                        <br /><br />
+                        Our first speaker is Nate Taggart, CEO and Co-Founder of Stackery, a growing Portland startup the helps software developers deploy serverless software. Nate talks in depth about Stackery & serverless technology.
+                        <br /><br />
+                        Erik Gross, our second speaker, is an experienced software developer and Co-Founder of The Tech Academy. In his Tech Talk he speaks about breaking into the tech industry, and how to go about doing it.
+                        <br /><br />
+                        If you like this video, be sure to check out our past Tech Talks on our YouTube Channel, and visit our Meetup.com page to see our upcoming Tech Talks!
+                    </p>
+                    <a href='https://www.meetup.com/Tech-Academy-Portland-Meetup/' class="btn btn-primary btn-sm">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--3rd blog-->
+        <div class="blog-page-1 blog-page col-sm-8">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Alex B.</a> | <a href=""> 0 Comments</a> | <a href=""> 25 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>HTML & CSS: The Backbone of Front-end Web Development</h3></a>
+                    <p>
+                        Read what Tech Academy student Alex B. had to say about the HTML & CSS course:
+                        <br /><br />
+                        "In this course, I learned the backbone of front-end web development. HTML and CSS are what make the user interface of the web possible. I have learned how to create a solid structure in an HTML document that has everything I need to build up from. However, I now know to make sure I avoid in-line styling within my HTML to prevent unintended styling consequences. This also keeps my HTML code looking neat.
+                        <br /><br />
+                        This course also gave me extensive knowledge about how to use CSS as a powerful to add style to my web pages and visually bring them to life. CSS has vast numbers of properties that can be used in various combinations and with multiple user-defined HTML selectors to determine the final appearance of a web page. The enhance this process I can now use the Bootstrap framework with its built-in CSS to rapidly create web pages and style them.
+                        <br /><br />
+                        What I really appreciated about this course is the fact that you don't really realize how much you have learned until you get to the end, when you must create your own personal website. This is the moment where you actually think back and realize "hey I actually feel like I can do this" and you get a surge of confidence and actually go and build the website.
+                        <br /><br />
+                        As a software developer, I will use HTML, CSS, and CSS frameworks to create user experiences that are both visually appealing and engaging. For example, I can take ideas concerning the design of a mobile application and be able to create a front-end prototype of how it might appear."
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+
+        <!-- END BLOG PAGE 1 -->
+        <!-- START BLOG PAGE 2 -->
+        <div class="blog-page-2 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Beau Y.</a> | <a href=""> 0 Comments</a> | <a href=""> 22 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>HTML & CSS: The Backbone of Front-end Web Development</h3></a>
+                    <p>
+                        One of the biggest benefits we offer to students is the opportunity to put the coding skills they learn to use on an actual, real-world project that they can put on their resumes. While most courses end with a mock-project in the specific language, the Live Project differs in that it not only puts your programming skills to test but also gives students a little taste of what it's like to work as a developer.
+                        <br /><br />
+                        Students are assigned to a specific project where they work with a team, participate in daily stand-ups, retrospective & sprint reviews, as well as checking in and pushing their code daily.
+                        <br /><br />
+                        One of the current live projects being developed by students with the guidance of  staff members in the role of Project Managers is an online job board. One of our students working on development of this project is Beau Y., who told us a little bit about his experience:
+                        <br /><br />
+                        "I appreciate the opportunity I was given to work on the Job PDX live project.  I was glad to contribute to a resource to help others in my situation to begin a new life.  I am also grateful to have done most of the development via paired programming.  This definitely reduced my anxiety during the experience.
+                        <br /><br />
+                        Through the project I finally was able to gain an adequate understanding of MVC fundamentals which permitted me to write successful model, controller, and view code.  I was also able to learn some best practices such as the preference for strongly typed ViewModels over the dynamic ViewBag and the benefit of asynchronous code to improve performance.
+                        <br /><br />
+                        Up to this point I have not been the fastest coder.  But through the Live Project I found I could implement functional code in a short time (greatly aided by online tutorials).
+                        <br /><br />
+                        Finally, this experience strongly reinforced certain preferences I had coming into the project, most especially my aversion to remote work.  I have serious respect for students who worked mostly alone and off campus on their user stories and succeeded." (Beau Y., Tech Academy Student)
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!-- Post 2 -->
+        <div class="blog-page-2 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                <div class="posted-on">
+                    <span class="date">19</span>
+                    <span class="month">MAY</span>
+                </div>
+                <div class="blog-media">
+                    <img src="~/images/blog/blog1.png" class="img-responsive" alt="">
+                </div>
+                <div class="blog-meta">
+                    By <a href="">Lindsay</a> in <a href="">Tech Blog</a> | <a href=""> 22 Comments</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Student Cheryl L. on the Database & SQL Course</h3></a>
+                    <p>
+                        I was exposed briefly to SQL during my first job as a technical writer in the early to mid-1990s but didn’t actually use it, so this was an entirely new learning experience. Designing and building database via SQL coding, and then executing queries against them, is like assembling a big puzzle and then pulling various pieces out of the puzzle. The designing and building is putting the puzzle together and the queries are the extraction, although you’re never really taking apart the puzzle. You’re just looking at parts of the assembled puzzle and then putting back the pieces for future perspectives executed through queries.
+                    </p>
+                    <a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--3rd blog-->
+        <div class="blog-page-2 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                <div class="posted-on">
+                    <span class="date">19</span>
+                    <span class="month">May</span>
+                </div>
+                <div class="blog-media">
+                    <div class="youtube" data-video-id="xYIQ8VkadzA">
+                        <!-- Replace video id with your video id -->
+                        <i class="fa fa-play btn-play"></i>
+                    </div>
+                </div>
+                <div class="blog-meta">
+                    By <a href="">MR. Jack </a> Stanley <a href="">Co-Founder</a> | <a href=""> 0 Comments</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Tech Talk: with Tim Denison</h3></a>
+                    <p>
+                        In case you missed it: Check out another awesome Tech Academy Tech Talk with Graduate Tim Denison! Tim currently works as a Software Developer at Home Depot QuoteCenter. Hear what he has to say about life after The Tech Academy and starting up in the tech world after changing careers as a professional photographer.
+                    </p>
+                    <a href='https://www.meetup.com/Tech-Academy-Portland-Meetup/' class="btn btn-primary btn-sm">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- END BLOG PAGE 2 -->
+        <!-- START BLOG PAGE 3 -->
+        <div class="blog-page-3 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Tanner R.</a> | <a href=""> 0 Comments</a> | <a href=""> 18 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Connecting the Dots with Computer Basics</h3></a>
+                    <p>
+                        Student Tanner R. has a background similar to many of the students at The Tech Academy, and students starting software developer bootcamps everywhere. Unlike kids today, the internet, or even computers, were not an ever-present part of their lives. Eventually our use of and need for them grew. With that came a basic understanding of how to use and navigate them, but for most that was an incomplete understanding.
+                        <br /><br />
+                        Read what Tanner had to say about building upon his educational foundation with the Computer Basics Course:
+                        <br /><br />
+                        "Being born in 1983 before house hold computers where a thing, I never really had any practice or experience with computers until high school. Even then the internet had just come out and really doesn't resemble the web that is now. At that point in time the web was a research tool that really wasn't that reputable, and you typed up papers on them. So I never had any real computer training or knowledge as to how they work or what each computer term meant. I couldn't have told you what a network was, what url was, I think I knew www meant worldwide web and that Microsoft was a tool for writing papers and that about it.
+                        <br /><br />
+                        I bought my first computer when I was 21 in 2004 and gained my first real hands on experience as to what computers are on the inside, but again I just knew that ram meant faster, and a larger hard drive meant more movies. This basics course was exactly what I needed to connect the dots as to what is actually happening when I use a computer, the internet and web, and more importantly how to use computers more safely, securely, and efficiently. I knew how to code before taking this course by taking programming classes at PSU but sometimes terms or topics were thrown around in class that I'd nod my head along to thinking sure I have a general idea of what that is but not really. This course has made me feel more confident in my computer knowledge as I missed the basics growing up and never really had a solid foundation. Moving forward I can't wait to move on to the actual programming courses and put another layer on my foundation towards being a creative competent programmer."
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!--2nd blog-->
+        <div class="blog-page-3 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                <div class="posted-on">
+                    <span class="date">17</span>
+                    <span class="month">May</span>
+                </div>
+                <div class="blog-media">
+                    <div class="youtube" data-video-id="0jsOaMwchew">
+                        <!-- Replace video id with your video id -->
+                        <i class="fa fa-play btn-play"></i>
+                    </div>
+                </div>
+                <div class="blog-meta">
+                    By <a href="">MR. Jack </a> Stanley <a href="">Co-Founder</a> | <a href=""> 0 Comments</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Tech Talk with Rick Turoczy!</h3></a>
+                    <p>
+                        Check out one of our favorite Tech Talks with Rick Turoczy of Silicon Florist!
+                    </p>
+                    <a href='https://www.meetup.com/Tech-Academy-Portland-Meetup/' class="btn btn-primary btn-sm">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--3rd blog-->
+        <div class="blog-page-3 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Freeman C.</a> | <a href=""> 0 Comments</a> | <a href=""> 16 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Live Project with Student Freeman C.</h3></a>
+                    <p>
+                        "I found the Live Project experience to be the best part of the course studies. It provided me with a great real-world experience and was a lot of work, but also a lot of fun. It was a privilege to be able to help design and develop the ongoing JobPDX website.
+                        <br /><br />
+                        When I first started the Live Project I was overwhelmed with all the code I needed to study. However, after a day of going through each sheet and studying all the change logs I came up to speed, just as I would have to do in a real job coming into an ongoing project.
+                        <br /><br />
+                        To get my feet wet, I tackled a few easier tasks but then I took on some harder ones that I wasn’t clear what to do. However, once I got going, I was able to get my tasks accomplished.
+                        <br /><br />
+                        As a remote student, I appreciated being able to use Slack to chat, ask questions, get help, feedback, etc. I enjoyed the Sprint & Stand Up meetings and looked forward to them. Using Visual Studio TFS was great experience. I was able to use “Code Review” to look at a team mates code on an assist before a committed check-in. One day, so many team members where submitting code editing the same sheets that we all got good practice with the merge tool.
+                        <br /><br />
+                        For my part, I was able to add live numbers based on database queries for job and company count and use these in the search bar text and landing page. I also did a lot of work with the authentication so that an unauthenticated user could not access the job index functionality. I ran into lots of issue with the AntiForgeryToken code and created landings so users with saved passwords wouldn’t have to enter their credentials on every visit.
+                        <br /><br />
+                        Finally, I loved how the Live Project gave me real confidence that I really did learn the skills I needed at The Tech Academy. I was able to demonstrate to myself, the difference in my skills and knowledge before I started the program compared to now."
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!-- END BLOG PAGE 3 -->
+        <!-- START BLOG PAGE 4 -->
+        <div class="blog-page-4 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">The Tech Academy</a> | <a href=""> 0 Comments</a> | <a href=""> 11 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Sorting Algorithms</h3></a>
+                    <p>
+                        When most students first hear there are different sorting algorithms, the most common reaction is: why?
+                        <br /><br />
+                        The best way to explain it is to think about the different sorting methods as different ways to sort a shuffled deck of cards:
+                        <br /><br />
+                        Option 1: You could go through the deck and pick out all of the 2's and put them to the front. Then go through and pick out all of the 3's and put them next to the 2's. Then the 4's, etc, all the way through the deck. This might take awhile, but it would guarantee things were very much in order (you could potentially even organize them by suit while you were doing that).
+                        <br /><br />
+                        Option 2: Another way could be to first go through the deck and put all of the face cards together, all the 2-5 cards together, and all the 5-face cards together. Then go through again and again, each time organizing a little more specifically. This is a little easier on the mind, but has the downside that things really get shuffled up while you're doing it. It would be hard to maintain a previous order of suits.
+                        <br /><br />
+                        You can extrapolate that to programming by remembering that sometimes you are sorting HUGE data-sets. Some sorting methods are faster than others. You may want to go with the fastest method if the dataset is that big.
+                        <br /><br />
+                        But let's say you have a dataset where some of the data isn't unique (let's say you want to sort a deck of cards by suit, but keep the order of the numbers the same). You want to make sure you use a sorting method that maintains suit order, such as option 1.
+                        <br /><br />
+                        Of course, this is an oversimplified explanation, and there are whole college classes on sorting algorithms. But for right now, the important thing is to know that they exist, that they are already written for you (no need to write your own algorithm), and at some point in the future you may want to weigh using one algorithm versus another.
+                        <br /><br />
+                        Regards,
+                        The Tech Academy
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!-- 2nd Blog -->
+        <div class="blog-page-4 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Freeman Cooley</a> | <a href=""> 0 Comments</a> | <a href=""> 9 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Adventures in Computing by Freeman Cooley</h3></a>
+                    <p>
+                        When my last job as an Engineer in the semiconductor industry came to an end I decided I would like to update my programming skills. After lots of research I chose The Tech Academy due to its focus on “Full Stack” and the chance to learn some of the new “hot” languages I hadn’t been exposed to in my career. I’ve surprised myself how much I’ve learned. I recently completed the Python Course and getting experience with a beautiful high-level language was so much fun. However, my experience with programming goes way back to the late 1980’s.
+                        <br /><br />
+                        My first computer was a used PC clone XT 8088 with a monochrome monitor just like you see in the Fallout games. My friend that sold it to me set me up with a “menu’ so I could just hit a key to launch programs like “Word Perfect” or “Lotus 123.” One day, I hit the wrong key (Esc) and the menu disappeared and all I could see was the “C:\” prompt. I couldn’t get the menu to come back without calling my friend so I decided to take a computer class.
+                        <br /><br />
+                        So in 1990 I took a computer course at a local community college where I learned to use DOS and code in Basic. I remember needing to insert two 5 ¼ floppy disks into the lab computer, one for the DOS program, and the other to save my code.  I liked the course so much I decided to abandon my major in education and make a career in technology. Later, in engineering school I had to take a class in “C” language and I used Borland C compiler for DOS. My final project for the class was a program I wrote to animate a bus driving across a landscape, passing by different buildings all in 2D. The problem was, I had an AT 486 computer at home where I wrote the project, but the lab at school had these sluggish 8086 computers and the animation wouldn’t work because the frame rate was so slow. My professor let me bring in my PC to pass off the project and the next semester the school’s lab was full of 486 computers running Windows 3.1!
+                        <br /><br />
+                        Writing code was important in my 20 year career as an electronics engineer, but it was never my primary focus and was always very specialized to engineering applications. Writing code in my studies at the Tech Academy has opened up a whole new world to me and I look forward to completing my courses and leveraging my new skills in software development.
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!-- 3rd Blog -->
+        <div class="blog-page-4 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Deanna C.</a> | <a href=""> 0 Comments</a> | <a href=""> 8 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Computer Basics with Student Deanna C.</h3></a>
+                    <p>
+                        The first course students of The Tech Academy take is Computer Basics. This course covers terminology, basic machine design, computer network principles, internet design & operation, and much more.  We asked The Tech Academy student Deanna C. a few questions after she completed her Computer Basics course, and here's what she said:
+                        <br /><br />
+                        How can you use the information you learned on this course to succeed in the career of your choice?
+                        <br /><br />
+                        "The fundamentals of computer design can be useful in deciding how to design a program. It's also important to understand the limitations of certain types of hardware so you don't design something that will overload a system and not function optimally. Learning about web connections helps with understanding how the programs will interact with web users as well as how data will be transferred. It can be helpful to make sure data is transferred in a manner that allows a program to operate while being downloaded and not have lag times. Data storage can be important, even on a single device, for the speed any program operates at. Knowing the mechanics of how a program will operate and be used allows for a better design of the program."
+                        <br /><br />
+                        What did you get out of doing this course?
+                        <br /><br />
+                        "A lot of the information was concepts or information I already had some grasp of. The biggest things I got out of this course were reinforcement of those concepts, greater depth of understanding, as well as relational information. For instance, I'd heard of a router and a hub, and understood they generally worked to transfer data to a network. I learned the difference between them, that a router sends the information to the individual computer that asked for it, while a hub makes the information available to all of them. I also learned some interesting back ground information on terms, such as the origins of the term "boot up".  For the most part it was clarifying what I knew, such as the difference between the internet and the web, or the difference between magnetic hard drives and solid state hard drives. There were some terms that I also had heard and vaguely understood how they related to computers, but now have a much better grasp on, like asynchronous. So this course took the breadth of my knowledge of computers and deepened it.
+
+                        I really like all the little tid-bits about the origins of things, or how things were done in early computing. Things I knew generally about punch cards, but being able to relate them to transistors was fascinating.  Or explaining the origins of terms like "boot up" or that bit is short for binary digit. A lot of courses don't mention those things because they don't find it useful, but those interesting little bits helped keep me engaged in a course where I was already familiar with much of the material."
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+
+        <!-- END BLOG PAGE 4 -->
+        <!-- START BLOG PAGE 5 -->
+        <div class="blog-page-5 blog-page col-sm-8">
+            <div class="blog-card">
+                <div class="posted-on">
+                    <span class="date">5</span>
+                    <span class="month">May</span>
+                </div>
+                <div class="blog-media">
+                    <div class="youtube" data-video-id="jaza0pAhpLU">
+                        <!-- Replace video id with your video id -->
+                        <i class="fa fa-play btn-play"></i>
+                    </div>
+                </div>
+                <div class="blog-meta">
+                    By <a href="">MR. Jack </a> Stanley <a href="">Co-Founder</a> | <a href=""> 0 Comments</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>Tech Talk with Claudia Knauer!</h3></a>
+                    <p>
+                        Check out this week's entertaining & informative Tech Talk with Claudia Knauer of Xtreme Consulting Group! This week's talk is about networking and building meaningful relationships as a foundation for a successful career. Claudia is a second generation IT staffing, services and solutions professional. She has held positions in management, sales and recruiting for Fortune 100 and 500 companies on the West Coast.
+                    </p>
+                    <a href='https://www.meetup.com/Tech-Academy-Portland-Meetup/' class="btn btn-primary btn-sm">Learn More <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd Blog -->
+        <div class="blog-page-5 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Corey D.</a> | <a href=""> 0 Comments</a> | <a href=""> 3 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>An In-Depth Look at Finding, Landing & Negotiating a Junior Dev Job— Pt. 2</h3></a>
+                    <p>
+                        Here is part 2 our step-by-step look at the process of finding and landing a junior developer position with Tech Academy graduate Corey D. In part one he covered the application and follow-up process, his initial interview, and the following technical interview. We're picking up where we left off, on Step 11 after Corey's technical interview.
+                        <br /><br />
+                        <strong>Step 11:</strong>  I received the following email from the lead developer a few days later:
+                        <br /><br />
+                        <em>
+                            Corey,
+                            <br /><br />
+                            Both (name of interviewers) have reflected on our time together with you last week, and the possibility of moving forward.
+                            <br /><br />
+                            I feel like your enthusiasm and attitude would be great additions to the team, and you did quite well on the practical assignment. However, there were a few areas of concern that warrant further discussion, so we’d like have you back.
+                            <br /><br />
+                            How would Friday at 3 pm work for you?
+                            <br /><br />
+                            Thanks,
+                            <br /><br />
+                        </em>
+                        In response, I sent the following email:
+                        <br /><br />
+                        <em>
+                            (Name of interviewers),
+                            <br /><br />
+                            Good morning!  I hope all is well.  I apologize for not addressing all of your concerns in our last interview.  Any details regarding your concerns would be much appreciated.  I will see you both on Friday at 3pm.  Have a nice day!
+                            <br /><br />
+                            Thanks,
+                            <br /><br />
+                        </em>
+
+                        <strong>Step 12:</strong> Since the interviewers were on the fence about hiring me I wanted to make sure I left them with no doubt that I was the best fit for this position.  I contacted several instructors from my school, past bosses and co-workers to ask them for recommendation letters.  I thought that with proof of my experience and success in school and in the workplace I could persuade the interviewers.
+                        <br /><br />
+                        I received recommendation letters from a couple of instructors and a past boss.  I also asked these people to add their recommendations on my LinkedIn profile.  I brought the recommendation letters with me to the follow up interview.
+                        <br /><br />
+                        <strong>Step 13:</strong> Follow up interview: I met with the same two interviewers and they wanted more detail on the programming boot camp I attended as well as why I wanted to be a junior developer at their company instead of being one at the IT company at which I currently worked.
+                        <br /><br />
+                        I was able to better describe the programming boot camp and that I learned several languages as well as the researching skills needed to find solutions to coding issues/tasks.  I reiterated that the best thing I learned at the boot camp was how to become self-sufficient in finding solutions.
+                        <br /><br />
+                        This is when I provided the recommendation letters and told the interviewers there were more on my LinkedIn page.  I also explained that I felt this company was more aligned with my goals of helping people find God than the company I currently worked for.
+                        <br /><br />
+                        *Also, I asked them more questions about their team, company culture, my role as their junior developer.  The last question I asked was, “is there anything else you wanted to know about me in greater detail or did you have any additional hang-ups that needed to be addressed in order to avoid having another follow-up interview?”  I wanted to make sure they had everything they need to hire me and felt good about it.  The department manager asked me, “How do you overcome struggles?”  I told them about a story in my life where I struggled and persisted and overcame life’s obstacles at the time.  This answer as well as the letters of recommendation are what closed the deal for me in my opinion.  I think it really helped them to make the decision to move me on to the next interview.
+                        <br /><br />
+                        I asked them again if they needed any additional information and they said, “No, we are ready to move you on to the next interview!”
+                        <br /><br />
+                        Below is the email I sent the two interviewers after this follow up interview.  They requested professional and education references so I emailed them a list of 6-7 educational and professional references with names, phone numbers and email addresses (make sure to notify and confirm your references first!).
+                        <br /><br />
+                        <em>
+                            (Names of the interviewers),
+                            <br /><br />
+                            Good morning.  It was great meeting with you on Friday.  I hope you're feeling better (Department manager’s name)!
+                            <br /><br />
+                            I am excited to move forward in the process and look forward to meeting with (co-founder’s name).  I have attached a list of references for you to review.
+                            <br /><br />
+                            As for the meeting with (co-founder’s name), is there a time this Wednesday before or after the lunch hour that works for her?  I look forward to your response.
+                            <br /><br />
+                            Thanks,
+                            My Name
+                            Phone Number
+                            Email
+                            <br /><br />
+                        </em>
+
+                        <strong>Step 14:</strong> I had another situation/behavior/cultural interview with one of the co-founders of the company.  This was another very in-depth interview about my education and professional experience as well as some personal questions.  The interviewer wanted to know if I would fit in with the culture of the company.  Below are some of the questions she asked:
+                        <br /><br />
+                        What do you know about our company? Tell me about a time when you had to overcome adversity.  Tell me about a time your integrity was challenged.  Tell me about a time where you had to help a co-worker overcome an obstacle.  What does your desk at work look like right now? — I told them it was clutter free because clutter on my desk clutters up my mind and I like to think clearly.
+                        <br /><br />
+                        I asked her, “What’s the culture of the company like in addition to what is on the company website?”    I also asked her, “What are the next steps?”  She described the offer process and that HR would be in contact with me regardless if they wanted to offer me the position or not.
+                        <br /><br />
+                        Below is the email I received from the department manager after this interview:
+                        <br /><br />
+                        <em>
+                            Hi Corey,
+                            <br /><br />
+                            I spoke with (co-founder’s name) yesterday and she was very enthusiastic at the prospect of you joining the (company name) team.  So congratulations on that!
+                            <br /><br />
+                            I'll be calling your references over the next few days and should have an offer letter ready to present near the end of the week.
+                            <br /><br />
+                            Cheers,
+                            <br /><br />
+                        </em>
+                        Below is my response:
+                        <br /><br />
+                        <em>
+                            Hi (department manager),
+                            <br /><br />
+                            This is great news!  I look forward to hearing from you in the near future.  Please let me know if you have any questions or need additional information.  Have a great evening.
+                            <br /><br />
+                            Thanks,
+                            My Name
+                            Phone number
+                            <br /><br />
+                        </em>
+                        Step 15:  The department manager contacted my references and sent me the email below:
+                        <br /><br />
+                        <em>
+                            Hey Corey,
+                            <br /><br />
+                            I made contact with several of your references today, and they all spoke very highly of you, and not just in the way you would expect.  So I'm pleased to let you know we'll be extending an offer of employment, either today or Monday (depends on the workload of our HR folks).
+                            <br /><br />
+                            Additionally, can you email me your preferred start date so I can include it in your offer letter?
+                            <br /><br />
+                            Feel free to call or email me if you have any questions.
+                            <br /><br />
+                            Cheers,
+                            <br /><br />
+                        </em>
+                        Below is my response:
+                        <br /><br />
+                        <em>
+                            Hi (Department manager’s name),
+                            <br /><br />
+                            Happy Friday.  This is awesome!  I've been fortunate to work with some great people.
+                            <br /><br />
+                            I just completed the background check authorization online.  My preferred start date would be (date).  I have a planned vacation to see my sister and new nephew that next week (the week of (date)).  Would that work?
+                            <br /><br />
+                            Thanks,
+                            My Name
+                            <br /><br />
+                        </em>
+                        <strong>Step 16:</strong> Once we coordinated a start date that worked for both them and I, I received their offer letter.  I had some questions about the offer as well as the overall package/benefits so I replied to the offer letter email.  An important side-note here is that up until this point I made NO mention of money in the interview process.
+                        <br /><br />
+                        <em>
+                            Hi (HR director’s name),
+                            <br /><br />
+                            I hope you had a nice weekend!  Thank for the information you have included in the offer letter.  I have some questions that I hope you can answer.
+                            <br /><br />
+                            The offer letter states, “If you accept our offer, we suggest that you do not give notice of resignation to your current employer until we have notified you that all components of our pre-employment screening process have been satisfactorily completed.”  Have we completed all components of the pre-employment screening process?
+                            <br /><br />
+                            I have read the (Company’s online benefit page with hyperlink) page online which states the information online is a “brief overview.”  Will you provide me with the official benefit package information, please? I particularly have questions regarding:
+                            <ul>
+                                <li>Is this an hourly or salary paid position?</li>
+                                <li>If hourly, how does overtime at (company name) work?</li>
+                                <li>What is the schedule for this position?</li>
+                                <li>Monday- Friday 8am-5pm with 1-hour lunch?</li>
+                                <li>8am-4pm no lunch?</li>
+                                <li>Flexible schedule as long as a minimum of 40 hours are contributed?</li>
+                                <li>Etc.</li>
+                                <li>What is the typical rate of (company name) profit sharing disbursement?</li>
+                                <li>Will you provide more information on the vacation buy-up plan, please?</li>
+                                <li>What date will I be eligible to receive health, dental and vision benefits?</li>
+                                <li>How does sick time accrue?  Is it included in PTO time accrual or is it separate?</li>
+                                <li>How do bonuses/raises/reviews work at (company name)?</li>
+                                <li>What type of tuition reimbursement does (company name) provide?can</li>
+                            </ul>
+                            <br /><br />
+                            Any information is very much appreciated.  I look forward to your response.  Feel free to call or email at your earliest convenience.
+                            <br /><br />
+                            Thanks,
+                            Name
+                            Phone number
+                            Email
+                            <br /><br />
+                        </em>
+                        The HR director answered the questions he could and directed the questions he couldn’t to the department manager.
+                        <br /><br />
+                        <strong>Step 17:</strong> Counter offer. Once I received and reviewed their answers I sent them the following email in the morning:
+                        <br /><br />
+                        <em>
+                            Hi (HR director’s name),
+                            <br /><br />
+                            Good morning.  Thanks for the additional information you provided yesterday.  I am very excited to start on (date) and look forward to working for (company name) for many years!
+                            <br /><br />
+                            I researched salaries for (title of position in offer letter) positions in (city of company) and found the range for similar positions to be around (range in which I found).  Can we meet somewhere in the middle?  I look forward to hearing from you.  Please call or email me at your convenience.
+                            <br /><br />
+                            Thanks,
+                            Name
+                            Phone Number
+                            Email
+                            <br /><br />
+                        </em>
+                        After waiting all day to hear back from the company I started to regret my decision to send the email above.  The initial offer I received from them was a fair offer and was more than I was currently making.  Since I didn’t hear from them all day I figured they decided to hire someone else or withdraw their offer to me.  The whole day I was a nervous wreck and very regretful. However, I decided to be patient and wait for their response.
+                        <br /><br />
+                        I received the email below at 10:30pm that same night from the department manager:
+                        <br /><br />
+                        <em>
+                            Hey Corey,
+                            <br /><br />
+                            I received your counter and will give you a call tomorrow.  I think we can get where you'd like to be, but I have a few items I'd like to discuss before revising the offer and sending it your way.
+                            <br /><br />
+                            Cheers,
+                            <br /><br />
+                        </em>
+                        The department manager and I spoke on the phone the next day for about 15 minutes.  He increased the offer to middle of the range I provided in my counter offer.  I was very pleased with this amount and very thankful they still wanted me for the position.  The department manager was very excited for me to be a member of his team and was very encouraging.
+                        <br /><br />
+                        I received a revised offer with the new agreed upon salary and I signed it the next day!
+                        <br /><br />
+                        This is the most involved and strenuous interview I have ever had in my life or ever heard of!  The entire process took 2 months.
+                        <br /><br />
+                        The biggest takeaways for me are below:
+                        <br /><br />
+                        <ul>
+                            <li>Know what type of company you want to work for and what values that company must have in order for you to be willing to go through the entire application/interview/negotiation process.</li>
+                            <li>Or you can have several companies you know you would like to work for and search their job boards daily.</li>
+                            <li>Setup daily alerts for various position titles with various job boards</li>
+                            <li>Junior developer</li>
+                            <li>Junior Software engineer</li>
+                            <li>Junior web developer</li>
+                            <li>Entry level developer</li>
+                            <li>Entry level web developer</li>
+                            <li>Entry level software developer</li>
+                            <li>Research the company thoroughly so you are prepared to speak about it in your interviews.</li>
+                            <li>Follow up with HR or hiring manager after you submit your resume/application.</li>
+                            <li>Have several stories/examples of your past education and professional experiences.</li>
+                            <li>Organize these stories/examples using Situation/Action/Result format</li>
+                            <li>Mock interview with Job Placement personnel, family or friends.</li>
+                            <li>This will really help you with interview confidence.</li>
+                            <li>It’s much better to go to the interview already having said your stories/examples.</li>
+                            <li>Research the salary range of the position in which you are applying.</li>
+                            <li>Make sure to research salaries in the town/city of the position, not nationwide.</li>
+                            <li>Be polite with your counter offer and be patient.</li>
+                            <li>If you do counter their offer be flexible with their counter offers and consider the benefits you are receiving along with the salary.</li>
+                        </ul>
+                        <br /><br />
+                        Separation is in the preparation.  Most likely you will not have to go through the entire process listed above, however, if you are prepared you will separate yourself from your competition.  Good luck and God bless!
+                        <br /><br />
+                        *If you read any part of this article read this paragraph!
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!-- 3rd Blog -->
+        <div class="blog-page-5 blog-page col-sm-8" style="display : none;">
+            <div class="blog-card">
+                @*<div class="blog-media">
+                        <img src="~/images/next_courses/NextVersion-course-grid.png" class="img-responsive" alt="Image">
+                    </div>*@
+                <div class="blog-meta">
+                    By <a href="">Corey D.</a> | <a href=""> 0 Comments</a> | <a href=""> 3 May</a>
+                </div>
+                <div class="blog-body">
+                    <a href="blog-single.html" class="blog-title"><h3>An In-Depth Look at Finding, Landing & Negotiating a Junior Dev Job— Pt. 1</h3></a>
+                    <p>
+                        This article’s purpose is to illustrate to you the experience of a strenuous application, interview and negotiation process for the junior software developer position I obtained recently. This is a detailed description of the experience but it is to the point and full of practical as well as applicable information. My goal is for you to understand the process and the persistence it takes to get a junior developer job.
+                        <br /><br />
+                        <strong>Step 1:</strong> I decided on what type of company in which I wanted to work. The company’s goals, mission and vision needed to be aligned with mine. For example, I wanted to work for a company where I could help spread the word of God. This helped me identify the company I would apply with when a position it came to me in a job alert.
+                        <br /><br />
+                        <strong>Step 2:</strong> I set up daily alerts for Junior developer positions in the cities in which I wanted to work. I did this on Indeed, Monster, Career builder, etc. There are numerous companies looking for junior developers so when I received an alert I would research the company to see if it was in alignment with step 1.
+                        <br /><br />
+                        <strong>Step 3:</strong> I used Glassdoor, Indeed, Google reviews and the company’s website to research the company’s values, mission, vision, benefits and culture to see if it was a fit for me. If the company and I were aligned, I applied for the position. I applied via the company website as well as on the job search websites. This sent my resume and application to the company in multiple ways. It also showed I was very interested in the position. Below are supplemental questions asked in the online application with my responses.  Since the company and I were aligned I was easily able to provide my motivation and why I would be a good fit.
+                        <br /><br />
+                        <strong>Why did you decide to study software development?</strong>
+                        <br /><br />
+                        Software development is a great way to reach millions of people. It allows me to use creativity and technical skills which are some of my strengths. You can help change many peoples' lives with computer software and I would like to change their lives in a Godly and positive way.
+                        <br /><br />
+                        <strong>What was your favorite Computer Science course in school?</strong>
+                        <br /><br />
+                        My favorite was probably my most challenging course which was Python. This course really taught me how to be neat and organized with my code. It taught me how to use modules to my benefit. I had several "ah ha!" moments in this course and I feel I developed as a developer the most.
+                        <br /><br />
+                        <strong>What is the hardest project you worked on while in school? What role did you play in it? What was the outcome?</strong>
+                        <br /><br />
+                        I participated in a coding challenge at my school. I worked on a two-man team. It was in a sprint type of task. The task was to develop a webpage that allowed the user to encrypt and decrypt data typed into a text box on the webpage. We had a time constraint of one hour and had to work together to create a functioning website that had some style to it. Communication was key and we quickly divided up the project into our strengths. I took the style side of the webpage using HTML and CSS. We successfully created a functioning webpage that looked nice and ended up winning the challenge.
+                        <br /><br />
+                        <strong>What is your favorite programming language? Why?</strong>
+                        <br /><br />
+                        My favorite language is C# since its versatility can be used for a number of types of applications and web projects. Using it with .NET helps it become multi-platform compatible which allows me to make a variety of apps for a variety of operating systems. I like the fact that I can use ASP.NET with it to help create dynamic webpages as well as creating a nicely organized project file using Visual Studio. Visual Studio is the best IDE I have used and C# is easily accessible in Visual Studio.
+                        <br /><br />
+                        <strong>At (Company Name), we like to help our team grow. What would you like to learn from us?</strong>
+                        <br /><br />
+                        I want to learn how to use software to reach the public and teach them about God. I would like to learn how to become a better developer. I want to grow as a professional as well as an individual. Learning from mentors is a great way to develop so I would like to learn from a mentor at (Company Name). I would like to become a mentor someday. I would also like to get deeper into coding and learn more languages and master one or two.
+                        <br /><br />
+                        <strong>Why would you like to join the (Company Name) team? What will you bring to it?</strong>
+                        <br /><br />
+                        After researching (Company Name) I discovered it is a very well-liked company. I immediately liked the fact that (Company Name) is a Godly company with Godly aspirations. (Company Name) is in sync with my desire to help people learn more about God and how He can benefit a life in incomprehensible ways. Current and former employees seem to really like the atmosphere (Company Name) provides as well. (Company Name) seems like a company that provides a balanced work life at the same time challenging employees to grow and achieve goals.
+                        <br /><br />
+                        Step 4: After I sent in my applications I went to the company’s website to find an email address and phone number to the customer service department.  I also searched for the HR department’s email but couldn’t find it.  I used the format of the customer service’s email to blindly email the HR department.
+                        <br /><br />
+                        For example, I sent the email to customerserver@companyname.com as well as hr@companyname.com and humanresources@companyname.com.  The email I used is below.  I considered this email my cover letter/follow up letter.
+                        <br /><br />
+                        <em>
+                            Subject Line: Position Title on job post
+                            <br /><br />
+                            Hello,
+                            <br /><br />
+                            I hope you had a nice Christmas!  I recently applied for the (job title) position at (company name) and wanted to follow up with you.  Ever since I set a goal to become a software developer I wanted to use the skills as a means to reach people who were in need of God.  I believe that the technology (company name) offers is a unique avenue to reach out to believers and non-believers.
+                            <br /><br />
+                            (Company name) is looking for someone like me who is a passionate developer without a lot of experience. I have worked in the IT world for almost 2 years and have learned several programming languages in the last 8 months while attending The Tech Academy.  I love the team environment and can also work independently.  I experience both in my current position.  I currently work for a great insurance software company, however, (company name) offers a way to reach the public in a Godly way.
+                            <br /><br />
+                            When I saw this opportunity through (Company Name) I felt it was God connecting me with (company name) to use my talents, aspirations and skills to help advance His kingdom on earth.  If there is any additional information you need please feel free to contact me by phone or email.  I truly look forward to the opportunity to speak with you about the Junior Software Developer position and hope you have a blessed day!
+                            <br /><br />
+                            Thanks,
+                            Name
+                            Phone Number
+                            Email Address
+                            <br /><br />
+                        </em>
+                        I also called customer service, told them I recently applied for this position and would like to speak to the hiring manager.  They transferred me to HR’s voicemail.  I left a message stating my name, contact information, the position I recently applied for as well as my motivation to work for the company.
+                        <br /><br />
+                        <strong>Step 5: I received an email from the HR department with a request to complete an online assessment.  It was to “help us ensure that this position will fit your personality, attributes and strengths.” The assessment was multiple choice and the answers provided where: Strongly agree, Somewhat agree, Neutral, Somewhat disagree, Strongly disagree.  Whatever I answered I made sure to answer the questions using the Strongly agree or Strongly disagree.  This tactic shows you are able to confidently make a concrete decision.</strong>
+                        <br /><br />
+                        After I completed the assessment I called customer service again and asked to speak with HR to follow up on the next steps.  They transferred me to HR’s voicemail.  Again, I left a message telling them I completed the assessment, provided my name, contact information, the position as well as my excitement to work for the company.
+                        <br /><br />
+                        <strong>Step 6: I was then contacted by the Lead Developer of the company.  He wanted to setup an in-person interview and for me to take an assessment at the company to make sure it was me completing the assessment.  Below is my email to the Lead Developer:</strong>
+                        <br /><br />
+                        Hi (Lead developer’s name),
+                        <br /><br />
+                        I hope all is well.  This is great news!  Does sometime in the afternoon on Tuesday (date) work for you?  I look forward to hearing from you.  Have a blessed day.
+                        <br /><br />
+                        Thanks,
+                        My Name
+                        Phone Number
+                        Email
+                        <br /><br />
+                        <strong>Step 7: I met with the Lead developer.  I first took the additional in-person assessment then was interviewed by the Lead developer.  Some of the questions he asked are below:</strong>
+                        <br /><br />
+                        Why do you want this position?  Why do you want to work for this company?  What are 7-10 strengths?  What are 5-7 weaknesses? Who was your favorite boss? Why?  Who was your worst boss? Why?  How would my last 5 bosses rate me on a scale from 1-10? In software development, is it better to be a jack of all trades or master of one?- I chose Jack of all trades which was what the lead developer agreed with.
+                        <br /><br />
+                        We had a good conversation.  I asked him what were the next steps and he said he would like me to continue in the interview process.  The next interview was a technical interview.  We coordinated a time and date for the technical interview.  Once I got home from this interview I sent him the following email:
+                        <br /><br />
+                        <em>
+                            Hi (Lead developer’s name),
+                            <br /><br />
+                            It was nice meeting you today.  Thanks for considering me for the Junior Developer position!  I'm looking forward to the next step.  If you need any additional info call, text or email me.  Have a nice evening.
+                            <br /><br />
+                            Thanks,
+                            My Name
+                            Phone number
+                            Email
+                            <br /><br />
+                        </em>
+                        <strong></strong>Step 8: I wanted to know what to study for my technical interview so I sent the following email to the Lead developer:
+                        <br /><br />
+                        <em>
+                            Hi (Lead developer’s name),
+                            <br /><br />
+                            Good morning!  I'm looking forward to tomorrow's practical assignment and want to be as prepared as possible.  Do you have any insight to the language(s) or what I will be doing that you would share with me?  If not, I completely understand.  I want to be able to display my skills as best as possible for you tomorrow so any info is much appreciated!  Thanks for your time.
+                            <br /><br />
+                            Thanks,
+                            My Name
+                            Phone number
+                            Email
+                            <br /><br />
+                        </em>
+                        He sent the following email:
+                        <br /><br />
+                        <em>
+                            Corey,
+                            <br /><br />
+                            The practical will be building a web application using asp.net and C#.
+                            <br /><br />
+                            Thanks,
+                            <br /><br />
+                        </em>
+                        <strong>Step 9: Practical Assignment/Technical Interview</strong>
+                        <br /><br />
+                        I was given a set of requirements that I was to use to create a web application that would provide a user a car insurance quote based on the personal information the user provided in the web app.  The lead developer stated he didn’t expect me to complete all requirements and to do the best I could in the 1 hour 45 minutes allotted.  Once time was up we would review the web app I created.
+                        <br /><br />
+                        I actually didn’t get the web app to display a quote but was able to show the lead developer my thought process, pseudo code, actual code and my intentions on completing the web app.  I was able to come up with a car insurance quote formula that would divide the year of the car by the driver’s age.  This allowed for the younger the driver the higher the quote.
+                        He asked me what would be my next steps so I explained that in a real life scenario I would first get the app to display the quote value.  Second, I would like to gather more info from the user to provide a more accurate quote.
+                        <br /><br />
+                        All of this led to the lead developer telling me I passed and we would be moving on to the next step.  We set up a day and time for the department manager, lead developer and I to meet.
+                        <br /><br />
+                        <strong>Step 10:  I had a very in-depth interview with the department manager and lead developer.  This was called a “top grading“ interview and consisted of situational and behavioral interview questions.  Some of the interview questions are below:</strong>
+                        <br /><br />
+                        Tell us about a time you disagreed with a management decision. What was the most difficult course in school and why?  What books did you use in your courses? Why are you looking for a job?  What do you know about this company? Tell us about a time when you had to work with a team member to accomplish a task.  Tell us about a time when you helped your team improve. What was your biggest career/academic accomplishment?
+                        <br /><br />
+                        There were additional questions as well.  This interview lasted about 1.5 hours.  They really wanted to know about my school and professional background as well as how I worked in a team.  I asked them what the next steps were and they said if we decide to move on they will contact me.  I didn’t have a good feeling after this interview because it seemed like they were on the fence about hiring me and wanted someone with a 4 year degree in Computer Science (I had a 4 year Business degree and a programming bootcamp education).
+                        <br /><br />
+                        After the interview I went home and sent the following email to both interviewers:
+                        <br /><br />
+                        (Names of both interviewers),
+                        <br /><br />
+                        I wanted to thank you again for your time and consideration for the Junior Web Developer position at (name of company).  I know you stated you are going to take a deeper look at my resume so if there is additional information you need please feel free to contact me via phone or email.
+                        <br /><br />
+                        Since I couldn't remember the titles of the JavaScript books I used in school I looked them up and wanted to provide you with the titles and links:
+                        <br /><br />
+                        <ul>
+                            <li>Murach's JavaScript and jQuery</li>
+                            <li>Thinking in JavaScript</li>
+                        </ul>
+                        <br /><br />
+                        I look forward to hearing from you and hope you have a nice weekend!
+                        <br /><br />
+                        Thanks,
+                        My Name
+                        Phone number
+                        Email
+
+                    </p>
+                    @*<a href="blog-single.html" class="btn btn-primary btn-sm">Read More <i class="fa fa-long-arrow-right"></i></a>*@
+                </div>
+            </div>
+        </div>
+        <!-- END BLOG PAGE 5 -->
+        <!-- START PAGINATION -->
+        <div class="clearfix col-sm-8"></div>
+        <nav class="blogNav">
+            <ul class="pagination">
+                <li><a id="pagination-button-1">1</a></li>
+                <li><a id="pagination-button-2">2</a></li>
+                <li><a id="pagination-button-3">3</a></li>
+                <li><a id="pagination-button-4">4</a></li>
+                <li><a id="pagination-button-5">5</a></li>
+
+            </ul>
+        </nav>
+        <!-- END PAGINATION -->
+    </div>
+</div>
+
+<div id="back"><i class="fa fa-angle-up"></i></div>     <!-- Back To Top -->
+<!-- UNOBTRUSIVE JAVASCRIPT FOR ONLY THIS VIEW -->
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Views/Home/Blog.js"></script>
+}
+<!-- END BLOG PAGE SPECIFIC SCRIPTS-->
+

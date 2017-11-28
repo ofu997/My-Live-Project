@@ -1,0 +1,406 @@
+﻿
+@model PagedList.IPagedList<Podcast.Models.Podcast>
+@using PagedList.Mvc;
+<link href="~/Content/css/style.css" rel="stylesheet" type="text/css"/>
+
+
+@{
+    ViewBag.Title = "Podcasts";
+    @*Layout = "~/Views/Shared/_Layout.cshtml";*@
+}
+
+
+<div class="page-header">
+    <div class="container">
+        <h1>Tech Blog</h1>
+        <ul class="breadcrumb">
+            <li><a href='@Url.Action("Index", "Home")'>Home</a></li>
+            <li class="active">The Tech Academy Blog</li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="heading text-center">Podcasts</h2>
+
+<!--all podcast content-->
+<div class="container mb-20" id="podcastContentBox">
+    <div class="row">
+        <!--sidebar col-sm-4-->
+        <div class="col-sm-4">
+            <aside class="widget twitter-widget">
+                <h5 class="heading">Twitter Feed</h5>
+                <ul class="tweet-list">
+                    <li>Join us on Friday for a Tech Talk with <a href="">#Dr. Brent Wilson</a> of George Fox University!</li>
+                </ul>
+            </aside>
+            <aside class="widget search-widget">
+                <h5 class="heading">Subscribe to Blog</h5>
+                <form class="search form-inline">
+                    <!-- Search Form -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
+                        </span>
+                    </div>
+                </form>
+            </aside>
+            <aside class="widget category-widget">
+                <h5 class="heading">Categories</h5>
+                <ul class="categories">
+                    <li><a href='@Url.Action("computerBasics", "CourseOverViews")'>Computer Basics</a></li>
+                    <li><a href='@Url.Action("htmlCss", "CourseOverViews")'>What is HTML and CSS3</a></li>
+                    <li><a href='@Url.Action("versionControl", "CourseOverViews")'>Sourse Control</a></li>
+                    <li><a href='@Url.Action("cSharpAspNet", "CourseOverViews")'>.Net Framework</a></li>
+                    <li><a href='@Url.Action("jobPlacement", "CourseOverViews")'>Career</a></li>
+                    <li><a href='@Url.Action("overViewSoftwareDeveloper", "CourseOverViews")'>Techonology</a></li>
+                    <li><a href='@Url.Action("visualStudio", "CourseOverViews")'>Visual Studio</a></li>
+                </ul>
+            </aside>
+            <aside class="widget image-widget">
+                <h5 class="heading">Flickr Feed</h5>
+                <ul class="thumbs">
+                    <li><a href=""><img src="images/flickr-1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="images/flickr-3.jpg" alt=""></a></li>
+                </ul>
+            </aside>
+            <aside class="widget download-widget text-center">
+                <div class="download-info">
+                    <p class="inverse font24">Join us in the course room at The Academy.</p><br />
+                    <a href='@Url.Action("Contact", "Home")' class="btn btn-default">Apply Now</a>
+                </div>
+            </aside>
+            <aside class="widget tagcloud-widget">
+                <h5 class="heading">Trending Tags</h5>
+                <ul class="tagcloud">
+                    <li><a href="#">Math</a></li>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Course</a></li>
+                    <li><a href="#">Study</a></li>
+                    <li><a href="#">Bachelors</a></li>
+                    <li><a href="#">Best</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Life</a></li>
+                    <li><a href="#">Fun</a></li>
+                    <li><a href="#">Maths</a></li>
+                    <li><a href="#">Study</a></li>
+                </ul>
+            </aside>
+            <aside class="widget archive-widget">
+                <h5 class="heading">Archives</h5>
+                <ul class="archives">
+                    <li><a href="blog-list-left-sidebar.html">October 2015</a> <span class="badge">08</span></li>
+                    <li><a href="blog-list-left-sidebar.html">November 2015</a> <span class="badge">12</span></li>
+                    <li><a href="blog-list-left-sidebar.html">December 2015</a> <span class="badge">26</span></li>
+                    <li><a href="blog-list-left-sidebar.html">January 2016</a> <span class="badge">17</span></li>
+                    <li><a href="blog-list-left-sidebar.html">February 2016</a> <span class="badge">28</span></li>
+                </ul>
+            </aside>
+            <aside class="widget blog-widget">
+                <h5 class="heading">Recent Blog</h5>
+                <ul class="blog-thumbnail">
+                    <li class="entry">
+                        <div class="entry-content">
+                            <h4 class="entry-header"><a href="">Imposter Syndrome with Dan Linn</a></h4>
+                            <p class="entry-text">The “imposties”, as Linn calls them, is something that happens to everyone. In and outside of the Tech world.</p>
+                        </div>
+                    </li>
+                    <li class="entry">
+                        <div class="entry-content">
+                            <h4 class="entry-header"><a href="">Learning C# at The Tech Academy</a></h4>
+                            <p class="entry-text">In doing my final exercise, I made the front-end for a database come to life!</p>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="widget text-widget">
+                <h5 class="heading">Tech Academy</h5>
+                <p class="color2 font16">The Tech Academy is located in the heart of down town Portland Oregon.</p>
+                <p>Graduates are well-rounded, full-stack, junior developers that can code on the front-end and back-end.<a href='@Url.Action("Contact", "Home")'> Not only can they create dynamic websites,</a> but are trained in application development as well.</p>
+            </aside>
+        </div>
+        <!--end sidebar-->
+
+        <!--right side of content-->
+            
+            <div class="col-sm-8" id="tableContainer" >
+                    <br /><br /><br />
+
+                    @*
+                        <h2 class="heading text-center">Podcasts</h2>
+                    *@
+
+                    <!--create,search,back-->
+                    <div class="row">
+                        <div >
+                            <div class="col-sm-3" >
+                                <p>
+                                    @Html.ActionLink("Create New", "Create")
+                                </p>
+
+                                @* this Search box works *@
+                                @using (Html.BeginForm())
+                                {
+                                    <p>
+                                        Find by name: @Html.TextBox("SearchString")
+                                        <input type="submit" value="Search" />
+                                    </p>}
+
+                                <div>
+                                    @Html.ActionLink("Back to List", "Index")
+                                </div>
+                            </div>
+                            <!--page navigation-->
+                            <div class="col-sm-3" style="float: right; ">
+                                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+                                @Html.PagedListPager(Model, page => Url.Action("Index",
+                        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+                            </div>
+                            <!--end page navigation-->
+                        </div>
+                    </div>
+                    <!--end create,search,back-->
+
+
+                    
+                    <!--the actual table of podcasts-->
+                    <div class="row">
+                        <table class="table">
+                            <tr>
+                                <th class="col-sm-3">
+                                    @Html.DisplayNameFor(model => model.First().Video)
+                                </th>
+                                <th class="col-sm-2">
+                                    @Html.DisplayNameFor(model => model.First().Text)|
+                                    @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                                    |
+                                    @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+                                </th>
+                                <th class="col-sm-1">
+
+                                </th>
+                            </tr>
+
+                            @{ var buttonId = 0;}
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    <td>
+                                        <div style="padding: 0px 30px 0px 30px;">
+                                            <div class="row">
+                                                <div class="col-sm-2">
+                                                    @{  var vidId = @Html.DisplayFor(modelItem => item.Video);}
+                                                    <div class="youtube" data-video-id=@vidId style="width:480px;height:270px;">
+                                                        <i class="fa fa-play btn-play"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>Text: @Html.DisplayFor(modelItem => item.Text)</p>
+                                        <p>Timestamp: @Html.DisplayFor(modelItem => item.Timestamp)</p>
+                                        <p>Speaker: @Html.DisplayFor(modelItem => item.Speaker)</p>
+                                        @* The working link for adding likes *@
+                                        @Html.ActionLink("LIKE", "Create", "Likes", new { id = item.Id }, null)
+
+                                        <p> ~~Number of Likes: ~~@item.NumberOfLikes.Count</p>
+
+                                        @* friday 10/20/17*@
+                                        @{ var id = item.Id;}
+                                        @{ var ajaxNumberOfLikes = item.NumberOfLikes.Count;}
+                                        @{ var submitButtonId = (buttonId + 1).ToString();}
+                                        @{ var outputBoxId = (buttonId + 2).ToString();}
+                                        @{ var HtmlTextboxId = (buttonId + 3).ToString();}
+                                        @{ var idHiddenfield= (buttonId + 4).ToString();}
+                                       
+                                        @Html.TextBox(HtmlTextboxId)
+                                        <input type="button" value="LIKE" id=@submitButtonId />
+                                        <input type="hidden" id=@idHiddenfield value=@id />
+                                        <br />
+                                        <p>Likes: </p><span id=@outputBoxId></span>
+
+                                        
+                                             @* Try to pass ajaxNumberOfLikes. Create Ids for input and display boxes above *@
+                                            <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+                                            <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+                                        <script>
+                                            $(function () {
+                                                $('#'+@submitButtonId).click(function () {
+                                                    // input field with id=submitButtonId is clicked, its value is ajaxNumberOfLikes
+                                                    $('#'+@submitButtonId).defaultValue=@ajaxNumberOfLikes;
+                                                    var url="@Url.Action("AddLikeAjax", "Podcasts")";
+                                                    // var value=HtmlTextbox's value, which should be input field with id=submitButtonId
+                                                    var likes=1;
+                                                    //var id=$('#'+@id).val();
+                                                    //console.log(@id);
+                                                    @*$('#'+@HtmlTextboxId).val();*@
+                                                    
+                                                    var data={ id:"e48a53b9-efd8-4050-9d15-f47d1c9c987b"};
+
+                                                    $.post(url, data).done(function(data){
+                                                        console.log("data back");
+                                                        $('#'+@outputBoxId).html(data);
+                                                    }).fail(manageErrorAjax).always(function(){
+
+                                                    });
+                                                });
+                                                function manageErrorAjax(err){
+                                                    console.log(err.responseText);
+                                                }
+                                            });
+                                        </script>
+                                           
+                                           
+                                        
+
+                                        @* Thursday attempt*@
+                                        @*                                         @{ buttonId = buttonId + 1;}
+    @{ var buttonIdToString = buttonId.ToString();}
+    @using (Ajax.BeginForm("Index", "Podcasts",
+            new AjaxOptions()
+            {
+                HttpMethod = "POST",
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "target"
+            }
+    ))
+    {
+        <input type="number" name="likes" value=@item.NumberOfLikes.Count.ToString()/>
+        <input class="btn btn-primary" type="submit" value="LIKE" name="btn-AddLikeAjax"/>
+        <div><span id="target"></span></div>
+        <button type="button"
+
+
+                onclick="AddLike(@item.NumberOfLikes.Count, @buttonIdToString);">
+            Like: <p id="@buttonIdToString">likes: @item.NumberOfLikes.Count.ToString()</p>
+        </button>
+    }*@
+
+
+                                        @* 
+                                        do we really need to look inside each Like? 
+                                        
+                                                @foreach (var like in item.NumberOfLikes)
+                                            {
+                                                @* <p>@Html.DisplayFor(modelItem => like)</p>
+
+                                        wrong: Number of likes is in Podcast. <p>number of likes: @Html.DisplayFor(modelItem => like.NumberOfLikes)</p>
+                                        wrong input variables:                                         var id = @Html.DisplayFor(modelItem => item.Id);
+                                            var likes = @Html.DisplayFor(modelItem => like.NumberOfLikes);
+                                            <button type="button"
+                                                    onclick="AddLike(likes, id);">
+                                                Like
+                                            </button>
+                                            likeCounter = likeCounter + 1;
+                                            <p>like counter: @likeCounter</p> 
+                                            }
+                                        *@
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })|
+                                        @Html.ActionLink("Details", "Details", new { id = item.Id })|
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                    </td>
+                                </tr>       }
+                        </table>
+                    </div>
+                    <!--end the actual table of podcasts -->
+                    
+                    <div class="row">
+                        <div class="col-sm-4" style="float:right;">
+                            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                            @Html.PagedListPager(Model, page => Url.Action("Index",
+                        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+                        </div>
+                    </div>
+                 </div>
+           
+        <!--end right side of content-->]
+        @using (Ajax.BeginForm("Index", "Podcasts",
+                new AjaxOptions()
+                {
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "target"
+                }
+        ))
+        {
+            <input type="number" name="likes"/>
+            <input class="btn btn-primary" type="submit" value="LIKE" name="btn-AddLikeAjax" />
+            <div><span id="target"></span></div>
+            @* <button type="btn btn-primary" typeof="submit"
+            //onclick="AddLike(@item.NumberOfLikes.Count, @buttonIdToString);">
+        Like: <p id="target">likes: @item.NumberOfLikes.Count.ToString()</p>
+    </button>*@
+        }
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    
+    /*
+    function Like() {
+        //likes = likes + 1;
+       // alert(likes.toString());
+        //alert(id);
+        alert("hello");
+    };
+    function AddLike(likes, id) {
+        likes = likes + 1;
+        alert(likes.toString());
+        alert(id);
+        alert("hello");
+
+        function ShowLikes(likeCounter) {
+            alert(likeCounter.toString());
+        };
+        //document.getElementById("")
+        //var target = document.getElementById(id);
+        //alert(id);
+        //$("#id").val = value;
+    };
+    */
+
+    /*
+    $(document).ready(function () {
+        
+     //do we need this for Ajax? 
+
+        function AddLike(likes, id) {
+            likes = likes + 1;
+            var likesToString = likes.toString();
+            var data=document.getElementById(id);
+
+            document.getElementById(id).innerHTML = likes;
+
+            $.ajax({
+                type:"POST",
+                url:"/Podcasts/Index",
+                data: likes,
+                
+            })
+            
+        };
+    
+    });
+    */
+</script>
+<br />
+
+
+
+
+
+
+
