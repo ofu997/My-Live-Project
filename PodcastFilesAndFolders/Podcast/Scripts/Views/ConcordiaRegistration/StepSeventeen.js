@@ -1,0 +1,26 @@
+﻿$(document).ready(function () {
+    $("#agree-disagree-form-btn").on("click", function () {
+        var data = $("input[name='agree-or-disagree']:checked").val();
+
+        if (data == 'disagree') {
+            alert('By refusing to follow our school’s policies, you are not eligible to enroll in our program. We wish you the best of luck in your pursuit of becoming a software developer!');
+            window.location.replace("/Home/index");
+
+        } else {
+
+            $.ajax({
+                type: "POST",
+                url: "/ConcordiaRegistration/StepSeventeen",
+                data: { data: data },
+                success: function (response) {
+                    window.location.href = "/ConcordiaRegistration/StepNineteen";
+                },
+                dataType: "json",
+                error: function (e) {
+                    console.log(e);
+                },
+                traditional: true
+            });
+        }
+    });
+});
