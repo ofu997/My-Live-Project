@@ -1,3 +1,3 @@
 # My-Live-Project
 
-![Picture 1](/blob/master/lmspic1.png)
+![pic 1](https://raw.github.com/ofu997/My-Live-Project/master/lmspic1.png)
