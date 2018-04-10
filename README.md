@@ -8,14 +8,17 @@ The purpose of this live project was to store and organize media files for The T
 **A general view of the webpage.**
 ![General View](https://raw.github.com/ofu997/My-Live-Project/master/lmspic4.png)
 
-
+<br/>
+<br/>
 **A post with likes added by a user.**
 ![Post with Likes](https://raw.github.com/ofu997/My-Live-Project/master/after.png)
 
-
+<br/>
+<br/>
 **The edit page of a post.**
 ![Edit](https://raw.github.com/ofu997/My-Live-Project/master/lmspic3.png)
 
-
+<br/>
+<br/>
 **The create page of a post.**
 ![Create](https://raw.github.com/ofu997/My-Live-Project/master/lmspic5.png)
