@@ -6,16 +6,15 @@
 
 @{
     ViewBag.Title = "Podcasts";
-    @*Layout = "~/Views/Shared/_Layout.cshtml";*@
 }
 
 
 <div class="page-header">
     <div class="container">
-        <h1>Tech Blog</h1>
+        @*<h1>Tech Blog</h1>*@
         <ul class="breadcrumb">
             <li><a href='@Url.Action("Index", "Home")'>Home</a></li>
-            <li class="active">The Tech Academy Blog</li>
+            @*<li class="active">The Tech Academy Blog</li>*@
         </ul>
     </div>
 </div>
@@ -149,7 +148,7 @@
                                 @using (Html.BeginForm())
                                 {
                                     <p>
-                                        Find by name: @Html.TextBox("SearchString")
+                                        Find by name of speaker: @Html.TextBox("SearchString")
                                         <input type="submit" value="Search" />
                                     </p>}
 
